@@ -8,7 +8,7 @@ const port = +process.env.REDIS_PORT! || 6379;
 const jobs = new Bull("jobs", { redis: { host, port } })
 
 jobs.process(async job => {
-  const { prompt } = job.data;
+  const { userId, prompt } = job.data;
   console.log('🛠 Processing job:', job.data);
   // const resp = await axios.post(`${process.env.AI_SERVICE_URL}/generate`, { prompt });
   // console.log('AI result:', resp.data);
