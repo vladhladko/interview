@@ -1,0 +1,17 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:queue": "pnpm --filter queue start",
+    "dev:redis": "redis-server --port 6379",
+    "dev:all": "npx concurrently \"pnpm dev:redis\" \"pnpm dev:backend\" \"pnpm dev:frontend\" \"pnpm dev:queue\""
+  },
+  "keywords": [],
+  "author": "Vlad Hladko",
+  "license": "ISC"
+}
