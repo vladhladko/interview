@@ -1,4 +1,4 @@
-import { useMutation } from "react-query";
+import { useMutation } from "@tanstack/react-query";
 import { Job } from "./jobs.interfaces";
 
 export const useCreateJob = () => {
